@@ -1,75 +1,88 @@
-let minutos=10
-let segundos=0
+// CONTADOR DE ESCASSEZ
 
-function atualizarTimer(){
+let tempo = 600; // 10 minutos
 
-if(segundos==0){
+function atualizarContador(){
 
-if(minutos==0){
-return
+let minutos = Math.floor(tempo / 60);
+let segundos = tempo % 60;
+
+if(segundos < 10){
+segundos = "0" + segundos;
 }
 
-minutos--
-segundos=59
+document.getElementById("countdown").innerText = minutos + ":" + segundos;
 
-}else{
-
-segundos--
-
+if(tempo > 0){
+tempo--;
 }
-
-document.getElementById("countdown").innerHTML=
-minutos+"m "+segundos+"s"
 
 }
 
-setInterval(atualizarTimer,1000)
+setInterval(atualizarContador,1000);
 
 
 
-function viewers(){
+// CONTADOR DE PESSOAS NA PÁGINA
 
-let v=Math.floor(Math.random()*20)+8
+let viewers = 18;
 
-document.getElementById("viewers").innerHTML=v
+function atualizarViewers(){
+
+let variacao = Math.floor(Math.random() * 5) - 2;
+
+viewers = viewers + variacao;
+
+if(viewers < 12){
+viewers = 12;
+}
+
+if(viewers > 34){
+viewers = 34;
+}
+
+document.getElementById("viewers").innerText = viewers;
 
 }
 
-setInterval(viewers,4000)
-
-viewers()
+setInterval(atualizarViewers,4000);
 
 
 
-let nomes=[
 
-"Maria",
-"João",
-"Ana",
+// POPUP DE COMPRAS
+
+const nomes = [
+
 "Lucas",
+"Maria",
 "Pedro",
-"Juliana",
-"Mateus",
-"Fernanda"
+"Ana",
+"Gabriel",
+"Rafael",
+"Beatriz",
+"João",
+"Samuel",
+"Daniel"
 
-]
+];
 
-function popup(){
+function mostrarPopup(){
 
-let nome=nomes[Math.floor(Math.random()*nomes.length)]
+const popup = document.getElementById("popup");
 
-let p=document.getElementById("popup")
+let nome = nomes[Math.floor(Math.random()*nomes.length)];
 
-p.innerHTML="✅ "+nome+" acabou de comprar"
+popup.innerText = nome + " acabou de comprar o Quiz Bíblico";
 
-p.style.display="block"
+popup.style.display = "block";
 
 setTimeout(()=>{
 
-p.style.display="none"
+popup.style.display = "none";
 
-},3000)
+},3000);
 
 }
 
-setInterval(popup,15000)
+setInterval(mostrarPopup,8000);
