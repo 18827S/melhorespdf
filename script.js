@@ -79,10 +79,41 @@ popup.style.display = "block";
 
 setTimeout(()=>{
 
-popup.style.display = "none";
+const nomes = [
+"Lucas","Maria","Pedro","Ana","Gabriel",
+"Rafael","Beatriz","João","Samuel","Daniel"
+];
 
-},3000);
+const cidades = [
+"São Paulo","Rio de Janeiro","Fortaleza",
+"Curitiba","Salvador","Recife",
+"Belo Horizonte","Brasília"
+];
+
+function mostrarPopup(){
+
+const popup = document.getElementById("popup");
+
+let nome = nomes[Math.floor(Math.random()*nomes.length)];
+
+let cidade = cidades[Math.floor(Math.random()*cidades.length)];
+
+popup.innerHTML = `
+<div class="popup-icon">✓</div>
+<div>
+<strong>${nome}</strong> de ${cidade}<br>
+acabou de comprar o Quiz Bíblico
+</div>
+`;
+
+popup.classList.add("show");
+
+setTimeout(()=>{
+
+popup.classList.remove("show");
+
+},4000);
 
 }
 
-setInterval(mostrarPopup,8000);
+setInterval(mostrarPopup,9000);
