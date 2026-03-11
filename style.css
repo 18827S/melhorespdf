@@ -1,30 +1,46 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 
-margin:0;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 
 background:linear-gradient(
 135deg,
-#0a1f44,
-#2e86ff
+#0a1f44 0%,
+#163d8c 40%,
+#2e86ff 100%
 );
 
 color:white;
+
+line-height:1.6;
+
 text-align:center;
+
+min-height:100vh;
 
 }
 
 
+/* HERO */
+
 .hero{
 
-padding:60px 20px;
+padding:70px 20px;
+max-width:900px;
+margin:auto;
 
 }
 
 .hero h1{
 
-font-size:42px;
-margin-bottom:10px;
+font-size:44px;
+font-weight:800;
+margin-bottom:15px;
 
 }
 
@@ -33,98 +49,150 @@ margin-bottom:10px;
 font-size:20px;
 opacity:0.9;
 
+max-width:650px;
+margin:auto;
+
 }
+
+
+/* TIMER */
 
 .timer{
 
-margin-top:20px;
+margin-top:25px;
 
 background:#ffd166;
-
 color:#000;
 
 display:inline-block;
 
-padding:10px 20px;
+padding:12px 25px;
 
-border-radius:6px;
+border-radius:8px;
 
 font-weight:bold;
 
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+
 }
+
+
+/* HERO IMAGE */
 
 .hero-img{
 
 width:100%;
-max-width:450px;
+max-width:460px;
 
-border-radius:12px;
+border-radius:15px;
 
-margin:30px auto;
+margin:40px auto;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+display:block;
+
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
 
 }
+
+
+/* PRICE BOX */
 
 .price-box{
 
 background:white;
+color:#111;
 
-color:#000;
+padding:35px;
 
-padding:30px;
+border-radius:15px;
 
-border-radius:12px;
-
-max-width:350px;
+max-width:360px;
 
 margin:30px auto;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+box-shadow:0 15px 40px rgba(0,0,0,0.45);
+
+transition:0.3s;
 
 }
+
+.price-box:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+/* OLD PRICE */
 
 .old-price{
 
 text-decoration:line-through;
 
-color:#888;
-
-}
-
-.price{
-
-font-size:48px;
-
-color:#e63946;
-
-font-weight:bold;
-
-}
-
-.price-desc{
-
-margin-bottom:20px;
-
-}
-
-.buy-btn{
-
-background:#27ae60;
-
-color:white;
-
-padding:16px 28px;
-
-text-decoration:none;
-
-border-radius:8px;
+color:#999;
 
 font-size:18px;
 
+margin-bottom:5px;
+
+}
+
+
+/* PRICE */
+
+.price{
+
+font-size:56px;
+
+font-weight:900;
+
+color:#e63946;
+
+margin-bottom:10px;
+
+}
+
+
+/* PRICE DESC */
+
+.price-desc{
+
+color:#555;
+
+margin-bottom:25px;
+
+font-size:14px;
+
+}
+
+
+/* BUTTON */
+
+.buy-btn{
+
+background:linear-gradient(
+45deg,
+#27ae60,
+#2ecc71
+);
+
+color:white;
+
+padding:18px 32px;
+
+border-radius:10px;
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
 display:inline-block;
 
-transition:0.3s;
+transition:all 0.3s ease;
+
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 
 }
 
@@ -132,61 +200,97 @@ transition:0.3s;
 
 transform:scale(1.08);
 
-background:#1e8449;
+box-shadow:0 12px 30px rgba(0,0,0,0.45);
 
 }
+
+
+/* BIG BUTTON */
 
 .big{
 
 font-size:22px;
-
-padding:18px 35px;
+padding:20px 38px;
 
 }
+
+
+/* VIEWERS */
 
 .viewers{
 
-margin-top:20px;
+margin-top:25px;
 
 opacity:0.9;
 
+font-size:15px;
+
 }
+
+
+/* BENEFITS */
 
 .benefits{
 
 background:white;
+color:#111;
 
-color:#000;
+padding:70px 20px;
 
-padding:60px 20px;
+margin-top:50px;
 
 }
+
+.benefits h2{
+
+font-size:32px;
+
+margin-bottom:40px;
+
+}
+
+
+/* CARDS */
 
 .cards{
 
 display:flex;
-
 flex-wrap:wrap;
 
 justify-content:center;
 
-gap:25px;
+gap:30px;
 
-margin-top:30px;
+max-width:1100px;
+
+margin:auto;
 
 }
 
+
+/* CARD */
+
 .card{
 
-background:#f4f4f4;
+background:#f8f8f8;
 
-padding:20px;
+width:270px;
 
-border-radius:10px;
+border-radius:12px;
 
-width:260px;
+overflow:hidden;
 
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+transition:0.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
 
 }
 
@@ -194,25 +298,68 @@ box-shadow:0 4px 10px rgba(0,0,0,0.1);
 
 width:100%;
 
-border-radius:8px;
+height:180px;
 
-margin-bottom:10px;
+object-fit:cover;
 
 }
+
+.card h3{
+
+margin-top:15px;
+
+font-size:20px;
+
+}
+
+.card p{
+
+padding:15px;
+
+font-size:15px;
+
+color:#555;
+
+}
+
+
+/* CTA */
 
 .cta{
 
-padding:70px 20px;
+padding:80px 20px;
+
+max-width:800px;
+
+margin:auto;
 
 }
+
+.cta h2{
+
+font-size:34px;
+
+margin-bottom:15px;
+
+}
+
+.cta p{
+
+font-size:18px;
+
+margin-bottom:30px;
+
+}
+
+
+/* POPUP */
 
 .popup{
 
 position:fixed;
 
-bottom:20px;
-
-left:20px;
+bottom:25px;
+left:25px;
 
 background:white;
 
@@ -220,10 +367,45 @@ color:black;
 
 padding:12px 18px;
 
-border-radius:8px;
+border-radius:10px;
 
-box-shadow:0 0 10px rgba(0,0,0,0.3);
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+
+font-size:14px;
 
 display:none;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+}
+
+.price{
+
+font-size:46px;
+
+}
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
 
 }
