@@ -180,33 +180,31 @@ font-size:14px;
 
 /* BOTÕES */
 
-.buy-button{
+.floating-buy{
 
-background:linear-gradient(
-45deg,
-#27ae60,
-#2ecc71
-);
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#27ae60;
 
 color:white;
 
-padding:18px 32px;
+padding:15px 20px;
 
-border-radius:10px;
-
-text-decoration:none;
-
-font-size:18px;
+border-radius:50px;
 
 font-weight:bold;
 
-display:inline-block;
+text-decoration:none;
 
-transition:all 0.3s ease;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 
-box-shadow:0 8px 25px rgba(0,0,0,0.3);
+z-index:999;
 
-}
+                     }
 
 .buy-button:hover{
 
