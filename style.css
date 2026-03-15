@@ -717,6 +717,44 @@ flex-direction:column;
 
 align-items:center;
 
+.compra-popup{
+
+position:fixed;
+
+bottom:20px;
+
+left:20px;
+
+background:white;
+
+color:black;
+
+padding:12px 18px;
+
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+
+font-size:14px;
+
+animation:slide 0.4s;
+
+}
+
+@keyframes slide{
+
+from{
+transform:translateX(-50px);
+opacity:0;
+}
+
+to{
+transform:translateX(0);
+opacity:1;
+}
+
+  }
+  
 }
 
 }
