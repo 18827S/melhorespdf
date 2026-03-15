@@ -8,9 +8,13 @@ let resposta = document.getElementById("resposta");
 
 if(opcao === "B"){
 
-resposta.innerHTML = "✅ Resposta correta! Deus criou os céus e a terra.";
+resposta.innerHTML = "✅ Você acertou! Esse é só um exemplo do quiz.";
 
 resposta.style.color = "lime";
+
+/* mostra botão de compra */
+
+document.getElementById("compra").style.display = "block";
 
 }
 
