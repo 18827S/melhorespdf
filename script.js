@@ -100,5 +100,29 @@ popup.classList.remove("show");
 }
 
 setInterval(mostrarPopup,9000);
+.floating-buy{
 
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#27ae60;
+
+color:white;
+
+padding:15px 20px;
+
+border-radius:50px;
+
+font-weight:bold;
+
+text-decoration:none;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+z-index:999;
+
+  }
 });
