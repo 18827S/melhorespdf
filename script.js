@@ -1,26 +1,36 @@
-// ESPERA O SITE CARREGAR
+// =====================
+// QUIZ INTERATIVO
+// =====================
 
-document.addEventListener("DOMContentLoaded", function () {
+function responder(){
+
+let resposta = document.getElementById("resposta");
+
+resposta.innerHTML = "✔ Resposta correta: Deus criou os céus e a terra.";
+
+resposta.style.color = "green";
+
+}
 
 
-// =========================
+
+// =====================
 // CONTADOR DE ESCASSEZ
-// =========================
+// =====================
 
 let tempo = 600; // 10 minutos
 
 function atualizarContador(){
 
-const contador = document.getElementById("countdown");
+let minutos = Math.floor(tempo/60);
 
-if(!contador) return;
-
-let minutos = Math.floor(tempo / 60);
 let segundos = tempo % 60;
 
-segundos = segundos < 10 ? "0" + segundos : segundos;
+if(segundos < 10){
+segundos = "0"+segundos;
+}
 
-contador.innerText = minutos + ":" + segundos;
+document.getElementById("countdown").innerText = minutos + ":" + segundos;
 
 if(tempo > 0){
 tempo--;
@@ -32,71 +42,44 @@ setInterval(atualizarContador,1000);
 
 
 
-// =========================
-// CONTADOR DE PESSOAS
-// =========================
 
-let viewers = 18;
-
-function atualizarViewers(){
-
-const viewersElement = document.getElementById("viewers");
-
-if(!viewersElement) return;
-
-let variacao = Math.floor(Math.random() * 5) - 2;
-
-viewers += variacao;
-
-if(viewers < 12) viewers = 12;
-if(viewers > 35) viewers = 35;
-
-viewersElement.innerText = viewers;
-
-}
-
-setInterval(atualizarViewers,4000);
-
-
-
-// =========================
+// =====================
 // POPUP DE COMPRAS
-// =========================
+// =====================
 
-const nomes = [
-"Lucas","Maria","Pedro","Ana","Gabriel",
-"Rafael","Beatriz","João","Samuel","Daniel"
+let nomes = [
+"Lucas","Maria","João","Ana",
+"Pedro","Daniel","Samuel","Beatriz"
 ];
 
-const cidades = [
-"São Paulo","Rio de Janeiro","Fortaleza",
-"Curitiba","Salvador","Recife",
-"Belo Horizonte","Brasília"
+let cidades = [
+"São Paulo","Rio de Janeiro","Recife",
+"Salvador","Curitiba","Fortaleza"
 ];
 
-function mostrarPopup(){
-
-const popup = document.getElementById("popup");
-
-if(!popup) return;
+function mostrarCompra(){
 
 let nome = nomes[Math.floor(Math.random()*nomes.length)];
+
 let cidade = cidades[Math.floor(Math.random()*cidades.length)];
 
+let popup = document.createElement("div");
+
+popup.className = "compra-popup";
+
 popup.innerHTML = `
-<div class="popup-icon">✓</div>
-<div>
-<strong>${nome}</strong> de ${cidade}<br>
-acabou de comprar o Quiz Bíblico
-</div>
+<strong>${nome}</strong> de ${cidade}
+acabou de comprar o PDF
 `;
 
-popup.classList.add("show");
+document.body.appendChild(popup);
 
 setTimeout(()=>{
-popup.classList.remove("show");
+
+popup.remove();
+
 },4000);
 
 }
 
-});
+setInterval(mostrarCompra,10000);
