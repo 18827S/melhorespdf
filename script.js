@@ -99,3 +99,92 @@ popup.remove();
 }
 
 setInterval(mostrarCompra,10000);
+
+/* ===========================
+QUIZ BÍBLICO
+=========================== */
+
+const perguntas=[
+
+{
+pergunta:"Quem criou o céu e a terra?",
+respostas:["Moisés","Abraão","Deus","Pedro"],
+correta:2
+},
+
+{
+pergunta:"Quantos dias Deus levou para criar o mundo?",
+respostas:["5","6","7","10"],
+correta:1
+},
+
+{
+pergunta:"Quem construiu a arca?",
+respostas:["Noé","Davi","Paulo","Salomão"],
+correta:0
+}
+
+];
+
+let indice=0;
+let pontuacao=0;
+
+function carregarPergunta(){
+
+const q=perguntas[indice];
+
+document.getElementById("question").innerText=q.pergunta;
+
+const answers=document.getElementById("answers");
+
+answers.innerHTML="";
+
+q.respostas.forEach((resposta,i)=>{
+
+const btn=document.createElement("div");
+
+btn.classList.add("answer");
+
+btn.innerText=resposta;
+
+btn.onclick=()=>responder(i);
+
+answers.appendChild(btn);
+
+});
+
+let progresso=((indice)/perguntas.length)*100;
+
+document.getElementById("progress").style.width=progresso+"%";
+
+}
+
+function responder(i){
+
+if(i===perguntas[indice].correta){
+
+pontuacao++;
+
+}
+
+document.getElementById("score").innerText="Pontuação: "+pontuacao;
+
+indice++;
+
+if(indice<perguntas.length){
+
+carregarPergunta();
+
+}
+
+else{
+
+document.getElementById("quiz-container").style.display="none";
+
+document.getElementById("sales-page").style.display="block";
+
+}
+
+}
+
+carregarPergunta();
