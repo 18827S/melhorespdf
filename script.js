@@ -120,44 +120,54 @@ document.getElementById("resultado").innerText =
 
 carregarPergunta();
 
-const depoimentos = [
+const comentariosData = [
 
-"Esse quiz foi muito divertido! Fiz com os jovens da igreja 🙌",
+{nome:"Lucas", texto:"Comprei e usei no grupo de jovens. Foi muito bom!"},
 
-"Usei esse PDF no grupo de jovens e todos amaram!",
+{nome:"Mariana", texto:"Achei que sabia muito da Bíblia... errei várias 😂"},
 
-"Não achei que sabia tão pouco da Bíblia 😅 muito bom!",
+{nome:"Rafael", texto:"Muito legal esse quiz, recomendo!"},
 
-"Comprei e usei no estudo bíblico. Foi incrível!",
+{nome:"Juliana", texto:"Usei no estudo bíblico e todo mundo participou."},
 
-"As perguntas são muito boas. Vale muito a pena."
+{nome:"Pedro", texto:"As perguntas são muito boas mesmo."}
 
 ];
 
-let depoimentoIndex = 0;
+function adicionarComentario(){
 
-function trocarDepoimento(){
+const container = document.getElementById("comentarios");
 
-const elemento = document.getElementById("video-text");
+if(!container) return;
 
-if(!elemento) return;
+const random = comentariosData[Math.floor(Math.random()*comentariosData.length)];
 
-depoimentoIndex++;
+const comentario = document.createElement("div");
 
-if(depoimentoIndex >= depoimentos.length){
-depoimentoIndex = 0;
+comentario.classList.add("comentario");
+
+comentario.innerHTML = `
+
+<div class="avatar">${random.nome[0]}</div>
+
+<div class="comentario-texto">
+
+<div class="nome">${random.nome}</div>
+
+<div>${random.texto}</div>
+
+</div>
+
+`;
+
+container.prepend(comentario);
+
+if(container.children.length > 4){
+
+container.removeChild(container.lastChild);
+
 }
 
-elemento.style.opacity = 0;
-
-setTimeout(()=>{
-
-elemento.innerText = depoimentos[depoimentoIndex];
-
-elemento.style.opacity = 1;
-
-},400);
-
 }
 
-setInterval(trocarDepoimento,4000);
+setInterval(adicionarComentario,4000);
