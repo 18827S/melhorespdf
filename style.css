@@ -1,1076 +1,87 @@
+/* RESET */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 }
+
+
+
+/* FUNDO DO SITE */
 
 body{
 
-font-family:Arial, Helvetica, sans-serif;
-
-background:linear-gradient(
-135deg,
-#0f2a44,
-#163e6e,
-#1e5aa5
-);
+background:linear-gradient(135deg,#0b1f3a,#1f4f9c);
 
 color:white;
 
-text-align:center;
-
-line-height:1.6;
-
-}
-
-
-/* HERO */
-
-.hero{
-
-padding:80px 20px;
-
-max-width:800px;
-
-margin:auto;
-
-}
-
-.hero h1{
-
-font-size:40px;
-
-margin-bottom:20px;
-
-}
-
-.hero p{
-
-font-size:20px;
-
-margin-bottom:30px;
-
-opacity:0.9;
-
-}
-
-
-/* BOTÃO */
-
-.btn{
-
-display:inline-block;
-
-background:#27ae60;
-
-color:white;
-
-padding:16px 28px;
-
-border-radius:10px;
-
-text-decoration:none;
-
-font-weight:bold;
-
-font-size:18px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-
-transition:0.3s;
-
-}
-
-.btn:hover{
-
-transform:scale(1.07);
-
-}
-
-.big{
-
-font-size:22px;
-
-padding:20px 36px;
-
-}
-
-
-/* DEMO */
-
-.demo{
-
-background:white;
-
-color:#222;
-
-padding:70px 20px;
-
-}
-
-.demo h2{
-
-margin-bottom:40px;
-
-font-size:32px;
-
-}
-
-
-/* VERSO */
-
-.verse{
-
-max-width:600px;
-
-margin:auto;
-
-background:#f9f6ea;
-
-padding:25px;
-
-border-radius:10px;
-
-margin-bottom:30px;
-
-}
-
-.verse-title{
-
-color:#c8a100;
-
-font-weight:bold;
-
-margin-bottom:10px;
-
-}
-
-.verse-text{
-
-font-style:italic;
-
-font-size:20px;
-
-}
-
-.verse-ref{
-
-color:#555;
-
-margin-top:5px;
-
-}
-
-
-/* PERGUNTA */
-
-.question{
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-.question-title{
-
-font-weight:bold;
-
-margin-bottom:10px;
-
-font-size:20px;
-
-}
-
-.option{
-
-display:block;
-
-width:100%;
-
-max-width:400px;
-
-margin:10px auto;
-
-padding:14px;
-
-border:none;
-
-border-radius:8px;
-
-background:#1e88e5;
-
-color:white;
-
-font-size:16px;
-
-cursor:pointer;
-
-transition:0.3s;
-
-}
-
-.option:hover{
-
-background:#1565c0;
-
-}
-
-
-/* BENEFÍCIOS */
-
-.benefits{
-
-padding:80px 20px;
-
-}
-
-.benefits h2{
-
-font-size:32px;
-
-margin-bottom:30px;
-
-}
-
-.benefits ul{
-
-list-style:none;
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-.benefits li{
-
-font-size:20px;
-
-margin:12px 0;
-
-}
-
-
-/* PREÇO */
-
-.price{
-
-background:white;
-
-color:#222;
-
-padding:70px 20px;
-
-}
-
-.price h2{
-
-font-size:32px;
-
-margin-bottom:20px;
-
-}
-
-.old{
-
-text-decoration:line-through;
-
-color:#888;
-
-font-size:20px;
-
-}
-
-.new{
-
-font-size:60px;
-
-color:#e53935;
-
-font-weight:bold;
-
-margin-bottom:25px;
-
-}
-
-
-/* TIMER */
-
-.timer{
-
-margin-top:20px;
-
-font-weight:bold;
-
-font-size:14px;
-
-opacity:0.8;
-
-
-}
-
-
-/* CTA */
-
-.cta{
-
-padding:80px 20px;
-
-max-width:700px;
-
-margin:auto;
-
-}
-
-.cta h2{
-
-font-size:32px;
-
-margin-bottom:15px;
-
-}
-
-.cta p{
-
-font-size:18px;
-
-margin-bottom:30px;
-
-}
-
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-.demo h2,
-.benefits h2,
-.price h2,
-.cta h2{
-
-font-size:26px;
-
-}
-
-.new{
-
-font-size:48px;
-
-}
-
-}font-size:22px;
-
-padding:20px 36px;
-
-}
-
-
-/* DEMO */
-
-.demo{
-
-background:white;
-
-color:#222;
-
-padding:70px 20px;
-
-}
-
-.demo h2{
-
-margin-bottom:40px;
-
-font-size:32px;
-
-}
-
-
-/* VERSO */
-
-.verse{
-
-max-width:600px;
-
-margin:auto;
-
-background:#f9f6ea;
-
-padding:25px;
-
-border-radius:10px;
-
-margin-bottom:30px;
-
-}
-
-.verse-title{
-
-color:#c8a100;
-
-font-weight:bold;
-
-margin-bottom:10px;
-
-}
-
-.verse-text{
-
-font-style:italic;
-
-font-size:20px;
-
-}
-
-.verse-ref{
-
-color:#555;
-
-margin-top:5px;
-
-}
-
-
-/* PERGUNTA */
-
-.question{
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-.question-title{
-
-font-weight:bold;
-
-margin-bottom:10px;
-
-font-size:20px;
-
-}
-
-.option{
-
-display:block;
-
-width:100%;
-
-max-width:400px;
-
-margin:10px auto;
-
-padding:14px;
-
-border:none;
-
-border-radius:8px;
-
-background:#1e88e5;
-
-color:white;
-
-font-size:16px;
-
-cursor:pointer;
-
-transition:0.3s;
-
-}
-
-.option:hover{
-
-background:#1565c0;
-
-}
-
-
-/* BENEFÍCIOS */
-
-.benefits{
-
-padding:80px 20px;
-
-}
-
-.benefits h2{
-
-font-size:32px;
-
-margin-bottom:30px;
-
-}
-
-.benefits ul{
-
-list-style:none;
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-.benefits li{
-
-font-size:20px;
-
-margin:12px 0;
-
-}
-
-
-/* PREÇO */
-
-.price{
-
-background:white;
-
-color:#222;
-
-padding:70px 20px;
-
-}
-
-.price h2{
-
-font-size:32px;
-
-margin-bottom:20px;
-
-}
-
-.old{
-
-text-decoration:line-through;
-
-color:#888;
-
-font-size:20px;
-
-}
-
-.new{
-
-font-size:60px;
-
-color:#e53935;
-
-font-weight:bold;
-
-margin-bottom:25px;
-
-}
-
-
-/* TIMER */
-
-.timer{
-
-margin-top:20px;
-
-font-weight:bold;
-
-}
-
-
-/* CTA */
-
-.cta{
-
-padding:80px 20px;
-
-max-width:700px;
-
-margin:auto;
-
-}
-
-.cta h2{
-
-font-size:32px;
-
-margin-bottom:15px;
-
-}
-
-.cta p{
-
-font-size:18px;
-
-margin-bottom:30px;
-
-}
-
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-.demo h2,
-.benefits h2,
-.price h2,
-.cta h2{
-
-font-size:26px;
-
-}
-
-.new{
-
-font-size:48px;
-
-}
-
-  }/* CAIXA DE PREÇO */
-
-.price-box{
-
-background:white;
-
-color:#111;
-
-padding:35px;
-
-border-radius:15px;
-
-max-width:360px;
-
-margin:30px auto;
-
-box-shadow:0 15px 40px rgba(0,0,0,0.45);
-
-transition:0.3s;
-
-}
-
-.price-box:hover{
-
-transform:translateY(-6px);
-
-}
-
-
-/* PREÇO ANTIGO */
-
-.old-price{
-
-text-decoration:line-through;
-
-color:#999;
-
-font-size:18px;
-
-margin-bottom:5px;
-
-}
-
-
-/* PREÇO */
-
-.price{
-
-font-size:56px;
-
-font-weight:900;
-
-color:#e63946;
-
-margin-bottom:10px;
-
-}
-
-
-/* INFO PREÇO */
-
-.price-info{
-
-color:#555;
-
-margin-bottom:25px;
-
-font-size:14px;
-
-}
-
-
-/* BOTÕES */
-
-.floating-buy{
-
-position:fixed;
-
-bottom:20px;
-
-right:20px;
-
-background:#27ae60;
-
-color:white;
-
-padding:15px 20px;
-
-border-radius:50px;
-
-font-weight:bold;
-
-text-decoration:none;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
-
-z-index:999;
-
-                     }
-
-.buy-button:hover{
-
-transform:scale(1.08);
-
-box-shadow:0 12px 30px rgba(0,0,0,0.45);
-
-}
-
-
-/* BOTÃO GRANDE */
-
-.big{
-
-font-size:22px;
-
-padding:20px 38px;
-
-}
-
-
-/* VIEWERS */
-
-.viewers{
-
-margin-top:25px;
-
-opacity:0.9;
-
-font-size:15px;
-
-}
-
-
-/* BENEFICIOS */
-
-.benefits{
-
-background:white;
-
-color:#111;
-
-padding:70px 20px;
-
-margin-top:60px;
-
-}
-
-.benefits h2{
-
-font-size:32px;
-
-margin-bottom:40px;
-
-}
-
-
-/* CARDS */
-
-.cards{
+min-height:100vh;
 
 display:flex;
-
-flex-wrap:wrap;
 
 justify-content:center;
 
-gap:30px;
-
-max-width:1100px;
-
-margin:auto;
-
-}
-
-
-/* CARD */
-
-.card{
-
-background:#f8f8f8;
-
-width:270px;
-
-border-radius:12px;
-
-overflow:hidden;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.15);
-
-transition:0.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 15px 30px rgba(0,0,0,0.2);
-
-}
-
-.card img{
-
-width:100%;
-
-height:180px;
-
-object-fit:cover;
-
-}
-
-.card h3{
-
-margin-top:15px;
-
-font-size:20px;
-
-}
-
-.card p{
-
-padding:15px;
-
-font-size:15px;
-
-color:#555;
-
-}
-
-
-/* CTA */
-
-.cta{
-
-padding:80px 20px;
-
-max-width:800px;
-
-margin:auto;
-
-}
-
-.cta h2{
-
-font-size:34px;
-
-margin-bottom:15px;
-
-}
-
-.cta p{
-
-font-size:18px;
-
-margin-bottom:30px;
-
-}
-
-
-/* POPUP */
-
-.popup{
-
-position:fixed;
-
-bottom:30px;
-left:30px;
-
-background:white;
-
-color:#111;
-
-padding:14px 18px;
-
-border-radius:12px;
-
-box-shadow:0 15px 40px rgba(0,0,0,0.3);
-
-font-size:14px;
-
-display:flex;
-
 align-items:center;
-
-gap:10px;
-
-opacity:0;
-
-transform:translateX(-40px);
-
-transition:all 0.6s ease;
-
-z-index:999;
-
-}
-
-.popup.show{
-
-opacity:1;
-
-transform:translateX(0);
-
-}
-
-.popup-icon{
-
-background:#27ae60;
-
-color:white;
-
-width:24px;
-
-height:24px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:50%;
-
-font-size:14px;
-
-font-weight:bold;
-
-}
-
-
-/* RESPONSIVO */
-
-@media(max-width:768px){
-
-.title{
-
-font-size:32px;
-
-}
-
-.subtitle{
-
-font-size:18px;
-
-}
-
-.price{
-
-font-size:46px;
-
-}
-
-.cards{
 
 flex-direction:column;
 
-align-items:center;
-
-.compra-popup{
-
-position:fixed;
-
-bottom:20px;
-
-left:20px;
-
-background:white;
-
-color:black;
-
-padding:12px 18px;
-
-border-radius:10px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
-
-font-size:14px;
-
-animation:slide 0.4s;
+text-align:center;
 
 }
 
-@keyframes slide{
 
-from{
-transform:translateX(-50px);
-opacity:0;
-}
 
-to{
-transform:translateX(0);
-opacity:1;
-}
-
-  }
-  
-}
-
-}
-#resposta{
-
-margin-top:15px;
-
-font-weight:bold;
-
-font-size:18px;
-
-  #sales-page{
-display:none;
-}
-  
-/* ===== ESTILO DO QUIZ ===== */
+/* QUIZ */
 
 #quiz-container{
 
 max-width:700px;
 
-margin:auto;
+width:90%;
 
 padding:40px;
 
+background:rgba(0,0,0,0.25);
+
+border-radius:15px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+
+animation:fadeIn 0.8s;
+
 }
+
+
+
+.subtitle{
+
+margin-top:10px;
+
+opacity:0.8;
+
+margin-bottom:25px;
+
+}
+
+
+
+/* BARRA DE PROGRESSO */
 
 .progress-bar{
 
 width:100%;
 
-height:10px;
+height:12px;
 
 background:#2b3e63;
 
-border-radius:10px;
-
-margin:20px 0;
+border-radius:20px;
 
 overflow:hidden;
+
+margin-bottom:30px;
 
 }
 
@@ -1082,29 +93,45 @@ width:0%;
 
 background:linear-gradient(90deg,#00ffd5,#00a2ff);
 
-transition:width 0.5s;
+transition:width 0.4s;
 
 }
 
-.answer{
 
-display:block;
+
+/* PERGUNTA */
+
+#question{
+
+font-size:24px;
+
+margin-bottom:20px;
+
+}
+
+
+
+/* RESPOSTAS */
+
+.answer{
 
 background:white;
 
 color:black;
 
-padding:12px;
+padding:14px;
 
 margin:10px auto;
 
-border-radius:8px;
+border-radius:10px;
 
 cursor:pointer;
 
-width:80%;
+width:85%;
 
-transition:0.3s;
+transition:0.25s;
+
+font-weight:bold;
 
 }
 
@@ -1112,12 +139,144 @@ transition:0.3s;
 
 transform:scale(1.05);
 
-background:#e6e6e6;
+background:#eaeaea;
 
 }
 
-padding:80px;
+
+
+/* PONTUAÇÃO */
+
+#score{
+
+margin-top:20px;
+
+opacity:0.8;
 
 }
-  
-  }
+
+
+
+/* CAMADA DE VENDA */
+
+#sales-page{
+
+display:none;
+
+max-width:700px;
+
+width:90%;
+
+padding:50px;
+
+background:rgba(0,0,0,0.3);
+
+border-radius:15px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+
+animation:fadeIn 0.8s;
+
+}
+
+
+
+/* PREÇO */
+
+.price-box{
+
+margin-top:30px;
+
+margin-bottom:30px;
+
+}
+
+.price{
+
+font-size:40px;
+
+color:#00ff88;
+
+font-weight:bold;
+
+}
+
+
+
+/* BOTÃO DE COMPRA */
+
+.buy-button{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:18px 35px;
+
+font-size:20px;
+
+background:#00ff88;
+
+color:black;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:10px;
+
+transition:0.3s;
+
+animation:pulse 2s infinite;
+
+}
+
+.buy-button:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+/* ANIMAÇÕES */
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1)}
+
+50%{transform:scale(1.05)}
+
+100%{transform:scale(1)}
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:600px){
+
+#question{
+font-size:20px;
+}
+
+.answer{
+width:95%;
+}
+
+}
