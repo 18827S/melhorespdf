@@ -1,33 +1,3 @@
-// =====================
-// QUIZ INTERATIVO
-// =====================
-
-function verificarResposta(opcao){
-
-let resposta = document.getElementById("resposta");
-
-if(opcao === "B"){
-
-resposta.innerHTML = "✅ Você acertou! Esse é só um exemplo do quiz.";
-
-resposta.style.color = "lime";
-
-/* mostra botão de compra */
-
-document.getElementById("compra").style.display = "block";
-
-}
-
-else{
-
-resposta.innerHTML = "❌ Resposta incorreta. Tente novamente.";
-
-resposta.style.color = "red";
-
-}
-
-}
-
 
 
 // =====================
